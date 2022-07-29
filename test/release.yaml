@@ -1,0 +1,9 @@
+security-groups:
+  -
+    name: chandan-03
+    desc: Test creating security group for chandan-03
+    vpc-id: vpc-014a2f1e3cadffe71
+  -
+    name: chandan-04
+    desc: Test creating security group for chandan-04
+    vpc-id: vpc-014a2f1e3cadffe71
