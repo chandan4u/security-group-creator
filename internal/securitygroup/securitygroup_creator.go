@@ -7,6 +7,7 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/jedib0t/go-pretty/v6/text"
 	"gopkg.in/yaml.v2"
+	"os"
 	"security-group-creator/library"
 )
 
@@ -16,6 +17,7 @@ func SGCreator(file string) {
 	sgYaml, err := sgReader(file)
 	if err != nil {
 		fmt.Println(fmt.Sprintf("[ERROR] Have some error in reading sg yaml : %v", err))
+		os.Exit(1)
 	}
 	ec2client := library.Ec2Session()
 	for _, value := range sgYaml.SecurityGroups {
